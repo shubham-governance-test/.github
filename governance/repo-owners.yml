@@ -1,0 +1,17 @@
+# FALLBACK reviewer routing config.
+#
+# The AI governance workflow resolves reviewers in this order:
+#   1. CODEOWNERS file in the target repo (fully automatic — no edits needed here)
+#   2. This file (only used if no CODEOWNERS exists or CODEOWNERS has no match)
+#
+# You only need to add a repo here if:
+#   - That repo does NOT have a CODEOWNERS file, AND
+#   - You still want a specific reviewer assigned for AI-authored PRs
+#
+# Format:
+#   <repo-name>: "@github-username"
+
+repos:
+  # Example — only needed for repos without CODEOWNERS:
+  # legacy-repo: "@your-reviewer"
+  # internal-tooling: "@your-reviewer"

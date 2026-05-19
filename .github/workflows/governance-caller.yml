@@ -1,0 +1,17 @@
+name: AI Governance
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, review_requested]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  govern:
+    uses: YOUR-ORG/.github/.github/workflows/ai-governance.yml@main
+    with:
+      pr_number: ${{ github.event.pull_request.number }}
+      repo_name: ${{ github.event.repository.name }}
+      repo_owner: ${{ github.event.repository.owner.login }}
+    secrets:
+      governance_token: ${{ secrets.GOVERNANCE_TOKEN }}
