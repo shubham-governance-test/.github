@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   govern:
-    uses: YOUR-ORG/.github/.github/workflows/ai-governance.yml@main
+    uses: shubham-governance-test/.github/.github/workflows/ai-governance.yml@main
     with:
       pr_number: ${{ github.event.pull_request.number }}
       repo_name: ${{ github.event.repository.name }}
